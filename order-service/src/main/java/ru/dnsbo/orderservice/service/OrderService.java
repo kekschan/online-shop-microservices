@@ -2,6 +2,7 @@ package ru.dnsbo.orderservice.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.dnsbo.orderservice.dto.OrderLineItemsDto;
 import ru.dnsbo.orderservice.dto.OrderRequest;
 import ru.dnsbo.orderservice.model.Order;
@@ -13,6 +14,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
